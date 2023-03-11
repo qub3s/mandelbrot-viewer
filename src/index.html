@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <script type='text/javascript' src="main.js"></script>
+        <link rel="stylesheet" href="style.css">
+        
+        <img src="assets/test.bmp" id="i" class="image" width="1000" height="1000" onmousedown="getPos(event)" ismap>
+
+        <div class="menu">
+            <label class="left" id = "x">X:</label> 
+            <label class="right" id = "xvalue"></label> <br>
+            <label class="left" id = "y">Y:</label>            
+            <label class="right" id = "yvalue"></label>         <br> 
+            <label class="left" id = "d">Distance:   </label>
+            <label class="right" id = "dist"></label>         <br> 
+            <label class="left" id = "d">Center X:   </label>
+            <label class="right" id = "centx"> </label>         <br> 
+            <label class="left" id = "d">Center Y:   </label>
+            <label class="right" id = "centy"> </label>         <br> 
+            <label class="left" id = "d">Zoom:   </label>
+            <input class="right" type="text" id="currentzoom" onchange="changezoom()" > <br>
+            <button class="right" id="btn" onclick="reset()">RESET</button> 
+        </div>
+        
+    </body>
+</html>
