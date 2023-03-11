@@ -84,10 +84,10 @@ fn newimage(x: f64, y: f64, width: f64 ){
     let foutput = Command::new("pwd")
         .output()
         .expect("failed to execute pwd");
-    let tmp = format!("{}{}",str::from_utf8(&foutput.stdout).unwrap(), "/src/mandelbrot");
+    let tmp = format!("{}{}",str::from_utf8(&foutput.stdout).unwrap().trim(), "/src/mandelbrot");
     println!("{}",tmp);
     
-    let output = Command::new("/home/cub3/documents/cs/git/github/mandelbrot/mandelbrot-viewer/src-tauri/src/mandelbrot")
+    let output = Command::new(tmp)
         .arg(x.to_string()).arg(y.to_string()).arg("1000").arg(width.to_string()).arg("16").arg("100").arg("../src/assets/test.bmp")
         .output()
         .expect("failed to execute process");
